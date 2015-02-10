@@ -1,0 +1,28 @@
+﻿<div ng-controller="newsManager">
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">News</a></li>
+            <li><a href="#tabs-2">Entertainment</a></li>
+            <li><a href="#tabs-3">Tech News</a></li>
+        </ul>
+        <div id="tabs-1">
+            <button ng-click="getSportNews()">Refresh</button>
+            <div ng-repeat="news in sportNewsList">
+                <p><a target="_blank" ng-href="{{news.Url}}"> {{news.Title}}</a></p>
+            </div>
+        </div>
+        <div id="tabs-2">
+            <button ng-click="getEntertainmentNews()">Refresh</button>
+            <div ng-repeat="news in entertainmentNewsList">
+                <p><a target="_blank" ng-href="{{news.Url}}"> {{news.Title}}</a></p>
+            </div>
+        </div>
+        <div id="tabs-3">
+            <button ng-click="getTechNews()">Refresh</button>
+            <div ng-repeat="news in techNewsList">
+                <p><a target="_blank" ng-href="{{news.Url}}"> {{news.Title}}</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
